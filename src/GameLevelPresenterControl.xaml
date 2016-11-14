@@ -1,0 +1,33 @@
+﻿<UserControl xmlns:my="clr-namespace:NRTowerDefense"  x:Class="NRTowerDefense.GameLevelPresenterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="93" d:DesignWidth="458">
+    <UserControl.Resources>
+        <CornerRadius x:Key="CornerRadius">6</CornerRadius>
+    </UserControl.Resources>
+    <Grid>
+        <Border BorderThickness="1" CornerRadius="{StaticResource CornerRadius}" BorderBrush="DimGray" ClipToBounds="True" Background="White">
+            <Grid Name="MainGrid" ClipToBounds="True">
+                <StackPanel Name="WaveStackPanel" Orientation="Horizontal">
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                    <my:GameWavePresenterControl />
+                </StackPanel>
+                <Border HorizontalAlignment="Right" Width="50" CornerRadius="0,6,6,0" BorderThickness="1" BorderBrush="DimGray" Margin="-1" Name="NextWaveBorder" MouseLeftButtonDown="NextWaveBorder_MouseLeftButtonDown" Background="#FFD1D1D1">
+                    <Label Content="Next" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" />
+                </Border>
+                <Border HorizontalAlignment="Right" Width="50" BorderThickness="1" BorderBrush="DimGray" Margin="-1,-1,46,-1" Name="StartLevelBorder" MouseLeftButtonDown="StartLevelBorder_MouseLeftButtonDown" Background="#FFDBDBDB">
+                    <Label Content="Start" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" />
+                </Border>                
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

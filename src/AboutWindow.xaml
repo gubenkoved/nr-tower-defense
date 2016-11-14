@@ -1,0 +1,48 @@
+﻿<Window x:Class="NRTowerDefense.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="220" Width="530" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="True" WindowStyle="None" FontFamily="Segoe Script" AllowsTransparency="True" Background="#00000000">
+    <Grid>
+        <Border Margin="15" CornerRadius="4" BorderThickness="1" BorderBrush="Black" Background="White" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" />
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="30" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Name="HeadLabel" Content="About" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16" Padding="20,5,1,1" />
+                    <Label Grid.Column="1" Content="x" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="16" Name="CloseLabel" MouseLeftButtonDown="CloseLabel_MouseLeftButtonDown" />
+                </Grid>
+                <Border Grid.Row="1" BorderBrush="#FFC8C8C8" BorderThickness="1" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="/NRTowerDefense;component/images/earth.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="100" />
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition />
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="NRTowerDefense" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Segoe Print" />
+                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="DimGray">
+                <Span xml:space="preserve">Игра является вариацией на тему </Span><Hyperlink Name="WikiTowerDefenseLink" Foreground="#FF2E8AFF" NavigateUri="http://ru.wikipedia.org/wiki/Tower_Defense" Click="WikiTowerDefenseLink_Click">tower defence</Hyperlink>.
+                        <Span>Написана на C# с использованием .NET 4.0 и WPF.</Span>
+                        </TextBlock>
+                        <Label Grid.Row="2" Content="Gubenkov D. Eugene, SSTU 2010" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="DimGray" />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

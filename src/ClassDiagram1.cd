@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NRTowerDefense.ColorFieldGameAnimation" Collapsed="true">
+    <Position X="24.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Animations\ColorFieldGameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.DisappearanceImageGameAnimation" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Animations\DisappearanceImageGameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.DisappearanceLineGameAnimation" Collapsed="true">
+    <Position X="22" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Animations\DisappearanceLineGameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.DisappearanceUIElementGameAnimation" Collapsed="true">
+    <Position X="26" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABIAAAAAAEAAgAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Animations\DisappearanceUIElementGameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.GameAnimation">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAQEAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Animations\GameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.TextGameAnimation" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAEIAggAAAEAACYAAAAAAAAAAA=</HashCode>
+      <FileName>Animations\TextGameAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.Bullet">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAIAACABBAAAAAAAAAAAAAAAQBA=</HashCode>
+      <FileName>Bullets\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.FreezeBullet" Collapsed="true">
+    <Position X="1.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQCAAEgAAAAAgAAAAACAAAAAQAgAgAABAQBA=</HashCode>
+      <FileName>Bullets\FreezeBullet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.LaserBullet" Collapsed="true">
+    <Position X="3.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAAABA=</HashCode>
+      <FileName>Bullets\LaserBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.MachinegunBullet" Collapsed="true">
+    <Position X="6" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAEgAAAAAAAAAAAAAAAAAQAgAAAAAAABA=</HashCode>
+      <FileName>Bullets\MachinegunBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.SimpleBullet" Collapsed="true">
+    <Position X="8.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAEgAAAAAAAAAAAAAAAAAQAgAAAABAQBA=</HashCode>
+      <FileName>Bullets\SimpleBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.SplinterBullet" Collapsed="true">
+    <Position X="10" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAEgAAAAAAAAAAAAAAAAAQAgAAAABAABA=</HashCode>
+      <FileName>Bullets\SplinterBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.FirstMonsterSelectionStrategy" Collapsed="true">
+    <Position X="19.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Common\FirstMonsterSelectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.TowerSelectedArg" Collapsed="true">
+    <Position X="42" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.MonsterSelectedArg" Collapsed="true">
+    <Position X="42" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Common\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.BlockDetectedArg" Collapsed="true">
+    <Position X="42" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.Game">
+    <Position X="39.25" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="NRTowerDefense.Game.ControlType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="NRTowerDefense.Game.TowerSelectedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="NRTowerDefense.Game.MonsterSelectedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="NRTowerDefense.Game.MonsterPassHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="NRTowerDefense.Game.MonsterDiedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="NRTowerDefense.Game.BlockDetectedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <AssociationLine Name="Timer" Type="NRTowerDefense.GameTimer" ManuallyRouted="true">
+      <Path>
+        <Point X="40.375" Y="0.5" />
+        <Point X="40.375" Y="0.438" />
+        <Point X="35.125" Y="0.438" />
+        <Point X="35.125" Y="2.402" />
+        <Point X="34.75" Y="2.402" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAQQAQIEAAAIAgAQAAgAAAAEEEAAAAAAEJCAAAFCQA=</HashCode>
+      <FileName>Common\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Timer" />
+      <Property Name="GameField" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.GameData">
+    <Position X="30.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAhAAAAAIABAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\GameData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Animations" />
+      <Property Name="GameObjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.GameField">
+    <Position X="35.75" Y="0.5" Width="2.5" />
+    <AssociationLine Name="gameData" Type="NRTowerDefense.GameData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="35.75" Y="4.746" />
+        <Point X="32.396" Y="4.746" Type="JumpStart" />
+        <Point X="32.229" Y="4.746" Type="JumpEnd" />
+        <Point X="31.875" Y="4.746" />
+        <Point X="31.875" Y="2.882" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BgAAgB0BBQBAgoIAHQUCEQABAEABAYwAEJQQADCEQAA=</HashCode>
+      <FileName>Common\GameField.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="gameData" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.GameLevel">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACACAAIAAAAAAAxEEAIAAAAAAAAAAAAASAA=</HashCode>
+      <FileName>Common\GameLevel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Waves" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.GameObject">
+    <Position X="18" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAgAAAAAAAAAAAAAAAQAAAABAAAQAA=</HashCode>
+      <FileName>Common\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.GameObjectDecorator">
+    <Position X="13.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAQAABAAgAAQAA=</HashCode>
+      <FileName>Common\GameObjectDecorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Component" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.TickArg" Collapsed="true">
+    <Position X="42" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\GameTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.GameTimer">
+    <Position X="32.75" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Delegate Name="NRTowerDefense.GameTimer.TickEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Common\GameTimer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAAABgAAAIAAAAAABAAAAAAAAAEAAAAEYAA=</HashCode>
+      <FileName>Common\GameTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.GroupWaveStrategy" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAA=</HashCode>
+      <FileName>Common\GroupWaveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.LevelDefinition" Collapsed="true">
+    <Position X="44" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Common\LevelDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.MonsterSelectionStrategy">
+    <Position X="17.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Common\MonsterSelectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.MonsterWave">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAIAAAAAAQAAMAAAAAAAAAAAAEAAACA=</HashCode>
+      <FileName>Common\MonsterWave.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="WaveStrategy" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="Monsters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.NotFreezedMonsterSelectionStrategy" Collapsed="true">
+    <Position X="16.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Common\NotFreezedMonsterSelectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.PathCache">
+    <Position X="41.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAIAAAAAEgAAAAAAIAAAAQAAAAACAACAAAEAA=</HashCode>
+      <FileName>Common\PathCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.PathFinder" Collapsed="true">
+    <Position X="44" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAQAAAAgAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\PathFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.RegularWaveStrategy" Collapsed="true">
+    <Position X="3.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAABAA=</HashCode>
+      <FileName>Common\RegularWaveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.SelectedGameObjectDecorator">
+    <Position X="13" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAkAAAAAAAABAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Common\SelectedGameObjectDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.WaveStrategy">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Common\WaveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.DarkMonster" Collapsed="true">
+    <Position X="30.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgEgAAAAAAAAAAAAAAAAAQAgAAAAIAABA=</HashCode>
+      <FileName>Monsters\DarkMonster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.ImmuneMonster" Collapsed="true">
+    <Position X="33.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgEgAAAAAIAAAAAAAAAAAQAgAAAAIAABA=</HashCode>
+      <FileName>Monsters\ImmuneMonster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.Monster">
+    <Position X="31.25" Y="5.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQkCAAAAACQgCAAAMAoqADABoCASIQAAAEBgAABBQxA=</HashCode>
+      <FileName>Monsters\Monster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.SimpleMonster" Collapsed="true">
+    <Position X="28.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAgEgAAAAAAAAAAAAAAAAAQAgAAAAIAABA=</HashCode>
+      <FileName>Monsters\SimpleMonster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NRTowerDefense.BombTower" Collapsed="true">
+    <Position X="17.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAQIgwEgAAAQAgAAgAQAAAAoARAgAAQIAAQEA=</HashCode>
+      <FileName>Towers\BombTower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.FreezeTower" Collapsed="true">
+    <Position X="20" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAQIgwEgAAAQAgAAAJQAAAAgERAgAAQIAAAEA=</HashCode>
+      <FileName>Towers\FreezeTower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.LaserTower" Collapsed="true">
+    <Position X="24.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAQIgwEgAAAQBgAEAAQAgAAgARAgAAQIAAQEA=</HashCode>
+      <FileName>Towers\LaserTower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.MachinegunTower" Collapsed="true">
+    <Position X="26.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAQIwwEgAAAQBgQEAAQAAAAgARAgAAQIAAQEA=</HashCode>
+      <FileName>Towers\MachinegunTower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.SimpleTower" Collapsed="true">
+    <Position X="15.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAQIgwEgAAAQAgAEAAQAAAAgATAgAAQIBAQEA=</HashCode>
+      <FileName>Towers\SimpleTower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NRTowerDefense.Tower">
+    <Position X="21" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgQAAAIAAARBAAAAAAEAAAAAAAAAAQQAA=</HashCode>
+      <FileName>Towers\Tower.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="MonsterSelectionStrategy" />
+      <Field Name="target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NRTowerDefense.TowerPrototype" Collapsed="true">
+    <Position X="22.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAEgAAAAAAAAAAACAAoAAQAgAAAAAAQgA=</HashCode>
+      <FileName>Towers\TowerPrototype.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Helper.HelperFunctions" Collapsed="true">
+    <Position X="44" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAABEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\HelperFunctions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="NRTowerDefense.GameCell" Collapsed="true">
+    <Position X="44" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAQAEAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\GameCell.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="NRTowerDefense.IFreezeBullet" Collapsed="true">
+    <Position X="40" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Bullets\IFreezeBullet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IDrawable" Collapsed="true">
+    <Position X="36.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Common\IDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.ITickable" Collapsed="true">
+    <Position X="38.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Common\ITickable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IUnfreezebleMonster" Collapsed="true">
+    <Position X="38.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monsters\IUnfreezebleMonster.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IExplodeTower" Collapsed="true">
+    <Position X="38.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Towers\IExplodeTower.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IHaveAttackArea" Collapsed="true">
+    <Position X="40.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAA=</HashCode>
+      <FileName>Towers\IHaveAttackArea.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IUpgradeableTower" Collapsed="true">
+    <Position X="36.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAIAQAAAAAAAgAAAAAAAAAAABAAAAQIAAAEA=</HashCode>
+      <FileName>Towers\IUpgradeableTower.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NRTowerDefense.IUpgradeableTowerWithFreezeBullet" Collapsed="true">
+    <Position X="36.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAJAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Towers\IUpgradeableTower.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NRTowerDefense.BlockTestResult" Collapsed="true">
+    <Position X="42.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAIAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Common\GameField.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NRTowerDefense.GameObjectState" Collapsed="true">
+    <Position X="42.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Common\GameObjectState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

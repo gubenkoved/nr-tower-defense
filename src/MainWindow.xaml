@@ -1,0 +1,182 @@
+﻿<Window x:Class="NRTowerDefense.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:System;assembly=mscorlib" 
+        Title="NRTowerDefense" Height="780" Width="1040" ResizeMode="NoResize" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" xmlns:local="clr-namespace:NRTowerDefense"  FontFamily="Segoe Print" Background="White" WindowStyle="None" Icon="/NRTowerDefense;component/creep.ico">
+
+    <Window.Resources>
+        <my:Double x:Key="InfoItemHeight">35</my:Double>
+    </Window.Resources>
+    <Border CornerRadius="0" BorderThickness="1" BorderBrush="Gray" Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="317" />
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition />
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="1" MouseDown="GameField_MouseDown" BorderBrush="White" CornerRadius="6" ClipToBounds="True" BorderThickness="2">
+                            <Border.Background>
+                                <ImageBrush TileMode="Tile" Stretch="None" ImageSource="/NRTowerDefense;component/images/fill.png" ViewportUnits="Absolute" Viewport="0,0,40,32"/>
+                            </Border.Background>
+                            <Grid Name="GameCanvasGrid">
+                                <Canvas Name="GameCanvas" ClipToBounds="True">
+                                    <local:GameFPSPresenterControl x:Name="gameFPSPresenterControl" Canvas.Left="0" Canvas.Top="0" Foreground="White" TextOptions.TextFormattingMode="Display" Width="67" Height="21" FontSize="8" />
+                                </Canvas>
+                                <local:GameMenuControl x:Name="gameMenuControl" Opacity="0" Padding="20" IsHitTestVisible="False"/>
+                            </Grid>
+                        </Border>
+                        <Grid Grid.RowSpan="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" ToolTip="А это сердце, да">
+                                <Image Height="32" Source="/NRTowerDefense;component/images/heart3.png" Margin="5,0,0,0" />
+                                <Label Name="LifeLabel" Margin="5,0,0,0" VerticalContentAlignment="Center" FontFamily="Cambria" FontSize="20" FontStyle="Normal" Content="-" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" ToolTip="&quot;Зелень&quot;">
+                                <Image Height="32" Source="/NRTowerDefense;component/images/greens.png" Margin="5,0,0,0" />
+                                <Label Name="MoneyLabel" Margin="5,0,0,0" VerticalContentAlignment="Center" FontFamily="Cambria" FontSize="20" FontStyle="Normal" Content="-" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="2" ToolTip="это Ваши очки" >
+                                <Image Height="32" Source="/NRTowerDefense;component/images/glasses.png" Margin="5,0,0,0"/>
+                                <Label Name="ScoreLabel" Margin="5,0,0,0" VerticalContentAlignment="Center" FontFamily="Cambria" FontSize="20" FontStyle="Normal" Content="-" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="3" ToolTip="Длина оптимального пути в игровых клетках">
+                                <Image Height="32" Source="/NRTowerDefense;component/images/measure.png" Margin="5,0,0,0" />
+                                <Label Name="LengthLabel" Margin="5,0,0,0" VerticalContentAlignment="Center" FontSize="20" FontStyle="Normal" FontFamily="Cambria" Content="-" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="4" ToolTip="Игровое время">
+                                <Image Height="32" Source="/NRTowerDefense;component/images/clock.png" Margin="5,0,0,0"/>
+                                <Label Name="TimeLabel" Margin="5,0,0,0" VerticalContentAlignment="Center" FontFamily="Cambria" FontSize="20" FontStyle="Normal" Content="-" />
+                            </StackPanel>
+                        </Grid>
+                        <local:GameLevelPresenterControl Grid.Row="2" x:Name="gameLevelPresenterControl" FontSize="10" Foreground="#FF303030" />
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="160" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Vertical">
+                            <Border CornerRadius="2" BorderThickness="1" BorderBrush="#FFC4C4C4" Height="56" VerticalAlignment="Top" ClipToBounds="True" Padding="2,0,0,0" Background="White">
+
+                                <WrapPanel VerticalAlignment="Center">
+                                    <Button Height="50" Name="AddSimpleTowerBtn" Width="50" Margin="1" Template="{StaticResource TowerButton}" BorderBrush="#FF868686" Tag="SimpleTower" Click="AddTower_Click" MouseEnter="AddTowerBtn_MouseEnter" MouseLeave="AddTowerBtn_MouseLeave">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Image Source="/NRTowerDefense;component/images/tower3.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                                <Image Source="/NRTowerDefense;component/images/gun4.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Button Height="50" Name="AddFreezeTowerBtn" Width="50" Click="AddTower_Click" Margin="1" Template="{StaticResource TowerButton}" BorderBrush="#FF868686" Tag="FreezeTower" MouseEnter="AddTowerBtn_MouseEnter" MouseLeave="AddTowerBtn_MouseLeave">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Image Source="/NRTowerDefense;component/images/tower4.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Button Height="50" Name="AddBombTowerBtn" Width="50" Click="AddTower_Click" Margin="1" Template="{StaticResource TowerButton}" BorderBrush="#FF868686" Tag="BombTower" MouseEnter="AddTowerBtn_MouseEnter" MouseLeave="AddTowerBtn_MouseLeave">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Image Source="/NRTowerDefense;component/images/tower5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Button Height="50" Name="AddMachinegunTowerBtn" Width="50" Click="AddTower_Click" Margin="1" Template="{DynamicResource TowerButton}" BorderBrush="#FF868686" Tag="MachinegunTower" MouseEnter="AddTowerBtn_MouseEnter" MouseLeave="AddTowerBtn_MouseLeave">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Image Source="/NRTowerDefense;component/images/tower8.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                                <Image Source="/NRTowerDefense;component/images/gun3.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="36" Height="36" />
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Button Height="50" Name="AddLaserTowerBtn" Width="50" Click="AddTower_Click" Margin="1" Template="{DynamicResource TowerButton}" BorderBrush="#FF868686" Tag="LaserTower" MouseEnter="AddTowerBtn_MouseEnter" MouseLeave="AddTowerBtn_MouseLeave">
+                                        <Button.Content>
+                                            <Grid>
+                                                <Image Source="/NRTowerDefense;component/images/tower7.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                                <Image Source="/NRTowerDefense;component/images/gun2.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" />
+                                            </Grid>
+                                        </Button.Content>
+                                    </Button>
+                                    <Button Height="50" Name="ArrowBtn" Width="50" Click="ArrowBtn_Click" Margin="1" Template="{DynamicResource TowerButton}" BorderBrush="#FF868686">
+                                        <Button.Content>
+                                            <Image Source="/NRTowerDefense;component/images/cursor.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Button.Content>
+                                    </Button>
+                                </WrapPanel>
+                            </Border>
+                            <Border BorderThickness="1" Margin="5,2,5,2
+                                    " MinHeight="70" BorderBrush="Gray" CornerRadius="0,0,5,5" Padding="5">
+                                <Border.OpacityMask>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#00000000" Offset="0" />
+                                        <GradientStop Color="White" Offset="0.252" />
+                                    </LinearGradientBrush>
+                                </Border.OpacityMask>
+                                <TextBlock Name="TowerInformationTextBlock" Text="Tower information" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Foreground="#FF303030" TextAlignment="Center" FontSize="10" />
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#FFD4FFD1" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Orientation="Vertical">
+                            <GroupBox Header="Информация о башне" FontSize="11" FontWeight="Normal" VerticalAlignment="Top" Foreground="#FF303030">
+                                <StackPanel>
+                                    <StackPanel Name="TowerParameters">
+                                        <local:GameParametrControl x:Name="CostParametr" Image="/NRTowerDefense;component/images/moneygreen.png" Height="{StaticResource InfoItemHeight}" Text="Цена" />
+                                        <local:GameParametrControl x:Name="RadiusParametr" Image="/NRTowerDefense;component/images/radius.png" Height="{StaticResource InfoItemHeight}" Text="Радиус атаки" InGameCell="True" />
+                                        <local:GameParametrControl x:Name="PowerParametr" Image="/NRTowerDefense;component/images/power.png" Height="{StaticResource InfoItemHeight}" Text="Сила атаки" />
+                                        <local:GameParametrControl x:Name="ReloadingSpeedParametr" Image="/NRTowerDefense;component/images/speed.png" Height="{StaticResource InfoItemHeight}" Text="Скорострельность" />
+                                        <local:GameParametrControl x:Name="BulletSpeedParametr" Image="/NRTowerDefense;component/images/rocket.png" Height="{StaticResource InfoItemHeight}" Text="Скорость ракеты" InGameCell="True" />
+                                        <local:GameParametrControl x:Name="FreezeTimeParametr" Image="/NRTowerDefense;component/images/snow.png" Height="{StaticResource InfoItemHeight}" Text="Время заморозки" Visibility="Collapsed" />
+                                        <local:GameParametrControl x:Name="FreezeFactorParametr" Image="/NRTowerDefense;component/images/snowpower.png" Height="{StaticResource InfoItemHeight}" Text="Сила заморозки" Visibility="Collapsed" />
+                                    </StackPanel>
+                                    <local:GameActionButton Height="{StaticResource InfoItemHeight}" ActionText="Усовершенствовать" Image="/NRTowerDefense;component/images/upgrade.png" Click="UprgadeBtn_Click" x:Name="UpgradeBtn" Margin="5,2" />
+                                    <local:GameActionButton Height="{StaticResource InfoItemHeight}" Image="/NRTowerDefense;component/images/moneyorange.png" ActionText="Продать" Click="SellBtn_Click" x:Name="SellBtn" Margin="5,2" />
+                                    <local:GameActionButton Height="{StaticResource InfoItemHeight}" Image="/NRTowerDefense;component/images/fire.png" ActionText="Взорвать" Click="ExplodeBtn_Click" x:Name="ExplodeBtn" Margin="5,2" />
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="Информация о монстре" FontSize="11" FontWeight="Normal" VerticalAlignment="Top">
+                                <local:GameMonsterInfoControl x:Name="SelectedMonsterInformation" FontSize="9" Foreground="#FF303030" />
+                            </GroupBox>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="866*" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="30" />
+                </Grid.ColumnDefinitions>
+                <Label Content="NRTowerDefense" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Name="TitleLabel" MouseLeftButtonDown="TitleLabel_MouseLeftButtonDown" FontFamily="Segoe Print" />
+                <Label Grid.Column="5" Content="x" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Script" FontSize="16" Name="CloseLabel" MouseLeftButtonDown="CloseLabel_MouseLeftButtonDown" />
+                <Label Grid.Column="4" Content="#" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Script" FontSize="16" Name="MaximazeLabel" IsEnabled="False" />
+                <Label Grid.Column="3" Content="_" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Script" FontSize="16" Name="MinimizeLabel" MouseLeftButtonDown="MinimizeLabel_MouseLeftButtonDown" />
+                <Label Grid.Column="2" Content="?" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Segoe Script" FontSize="16" Name="AboutLabel" MouseLeftButtonDown="AbouLabel_MouseLeftButtonDown" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

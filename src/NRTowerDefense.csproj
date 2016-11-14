@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{853C70B3-60C5-48BA-8EEA-AC7313F35C9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NRTowerDefense</RootNamespace>
+    <AssemblyName>NRTowerDefense</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>creep.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animations\ColorFieldGameAnimation.cs" />
+    <Compile Include="AlertControl.xaml.cs">
+      <DependentUpon>AlertControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Decorators\BorderGameObjectDecorator.cs" />
+    <Compile Include="Common\GameObject.cs" />
+    <Compile Include="Decorators\GameObjectDecorator.cs" />
+    <Compile Include="Common\GameProperties.cs" />
+    <Compile Include="Common\LevelDefinition.cs" />
+    <Compile Include="Decorators\LevelTowerDecorator.cs" />
+    <Compile Include="Decorators\LifeIndicatorMonsterDecorator.cs" />
+    <Compile Include="Decorators\MonsterDecorator.cs" />
+    <Compile Include="Decorators\ReloadingIndicatorTowerDecorator.cs" />
+    <Compile Include="Decorators\TowerDecorator.cs" />
+    <Compile Include="GameFPSPresenterControl.xaml.cs">
+      <DependentUpon>GameFPSPresenterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameMonsterInfoControl.xaml.cs">
+      <DependentUpon>GameMonsterInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameMenuControl.xaml.cs">
+      <DependentUpon>GameMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameRecordsPresenter.xaml.cs">
+      <DependentUpon>GameRecordsPresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Monsters\DarkMonster.cs" />
+    <Compile Include="NameAskerWindows.xaml.cs">
+      <DependentUpon>NameAskerWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Records\GameRecord.cs" />
+    <Compile Include="Records\GameRecords.cs" />
+    <Compile Include="Towers\BombTower.cs" />
+    <Compile Include="Bullets\Bullet.cs" />
+    <Compile Include="Animations\DisappearanceImageGameAnimation.cs" />
+    <Compile Include="Animations\DisappearanceUIElementGameAnimation.cs" />
+    <Compile Include="Common\FirstMonsterSelectionStrategy.cs" />
+    <Compile Include="Bullets\FreezeBullet.cs" />
+    <Compile Include="Towers\FreezeTower.cs" />
+    <Compile Include="Common\Game.cs" />
+    <Compile Include="GameActionButton.xaml.cs">
+      <DependentUpon>GameActionButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animations\GameAnimation.cs" />
+    <Compile Include="Common\GameCell.cs" />
+    <Compile Include="Common\GameField.cs" />
+    <Compile Include="Common\GameData.cs" />
+    <Compile Include="Common\GameLevel.cs" />
+    <Compile Include="GameLevelPresenterControl.xaml.cs">
+      <DependentUpon>GameLevelPresenterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GameObjectState.cs" />
+    <Compile Include="GameParametrControl.xaml.cs">
+      <DependentUpon>GameParametrControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GameTimer.cs" />
+    <Compile Include="GameWavePresenterControl.xaml.cs">
+      <DependentUpon>GameWavePresenterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GroupWaveStrategy.cs" />
+    <Compile Include="Common\HelperFunctions.cs" />
+    <Compile Include="Common\IDrawable.cs" />
+    <Compile Include="Towers\IExplodeTower.cs" />
+    <Compile Include="Bullets\IFreezeBullet.cs" />
+    <Compile Include="Towers\IHaveAttackArea.cs" />
+    <Compile Include="Bullets\LaserBullet.cs" />
+    <Compile Include="Monsters\ImmuneMonster.cs" />
+    <Compile Include="Common\ITickable.cs" />
+    <Compile Include="Monsters\IUnfreezebleMonster.cs" />
+    <Compile Include="Towers\IUpgradeableTower.cs" />
+    <Compile Include="Towers\LaserTower.cs" />
+    <Compile Include="Bullets\MachinegunBullet.cs" />
+    <Compile Include="Towers\MachinegunTower.cs" />
+    <Compile Include="Monsters\Monster.cs" />
+    <Compile Include="Common\MonsterSelectionStrategy.cs" />
+    <Compile Include="Common\MonsterWave.cs" />
+    <Compile Include="Common\NotFreezedMonsterSelectionStrategy.cs" />
+    <Compile Include="Common\PathCache.cs" />
+    <Compile Include="Common\PathFinder.cs" />
+    <Compile Include="Animations\DisappearanceLineGameAnimation.cs" />
+    <Compile Include="Common\RegularWaveStrategy.cs" />
+    <Compile Include="Bullets\SimpleBullet.cs" />
+    <Compile Include="Monsters\SimpleMonster.cs" />
+    <Compile Include="Towers\SimpleTower.cs" />
+    <Compile Include="Bullets\SplinterBullet.cs" />
+    <Compile Include="Animations\TextGameAnimation.cs" />
+    <Compile Include="Towers\Tower.cs" />
+    <Compile Include="Towers\TowerPrototype.cs" />
+    <Compile Include="Common\WaveStrategy.cs" />
+    <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AlertControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameActionButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameFPSPresenterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameLevelPresenterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameMonsterInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameParametrControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameRecordsPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameWavePresenterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NameAskerWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\monster2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\clock.png" />
+    <Resource Include="images\heart.png" />
+    <Resource Include="images\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\radar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\radius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\moneygreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\moneyorange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\upgrade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\snow.png" />
+    <Resource Include="images\snowpower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\monster3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\moneybag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\splinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bullet7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gun2.png" />
+    <Resource Include="images\tower7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\monster4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\heart2.png" />
+    <Resource Include="images\running.png" />
+    <Resource Include="images\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\money2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\measure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower6a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tower8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\circle_green.png" />
+    <Resource Include="images\circle_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\greens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\heart3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\exit.png" />
+    <Resource Include="images\newgame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="creep.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

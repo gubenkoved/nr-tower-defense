@@ -1,0 +1,73 @@
+﻿<Window x:Class="NRTowerDefense.GameRecordsPresenter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Таблица рекордов" Height="412" Width="684" WindowStyle="None" WindowStartupLocation="CenterScreen" Topmost="True" AllowsTransparency="True" Background="#00000000" FontFamily="Segoe Print" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="RecordTemplate">
+            <Border x:Name="border" Margin="2,1" Height="40" CornerRadius="4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{Binding Path=PlayerName}" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Label Content="{Binding Path=Date}" Grid.Column="1" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ContentStringFormat="d MMM yyyy HH:mm" />
+                    <Label Content="{Binding Path=Score}" Grid.Column="2" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                </Grid>
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF83FC77" Offset="0" />
+                        <GradientStop Color="#FF17AD07" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <DataTemplate.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="border" To="#FFB759" Duration="0:0:0.4"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="border" To="#E38400" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="border" Duration="0:0:0.4"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="border" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <Style x:Key="ListBoxStyle">
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="White" />
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border BorderThickness="1" CornerRadius="3" Margin="10" BorderBrush="Black" Background="White">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" />
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="36" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Таблица рекордов" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="Label_MouseDown" />
+                    <Label Content="x" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="CloseLabel" MouseDown="CloseLabel_MouseDown" />
+                </Grid>
+                <TabControl Name="LevelsTabControl" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" TabStripPlacement="Top" Background="White" BorderBrush="#FF949494"></TabControl>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

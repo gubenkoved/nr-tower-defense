@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="NRTowerDefense.GameMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:NRTowerDefense"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="395" d:DesignWidth="454" Background="{x:Null}">
+    <UserControl.Resources>
+        <local:SelectedItemToEnabledConverter x:Key="SelectedItemToEnabledConverter"/>
+    </UserControl.Resources>
+    
+    <Border CornerRadius="20" BorderThickness="20" Background="White" BorderBrush="#80FFFFFF">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Name="Header" Content="header" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+            <Label Name="Message" Content="message" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="DimGray" />
+            <Grid Grid.Row="2">
+                <Grid  VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1" Orientation="Vertical">
+                        <Button HorizontalContentAlignment="Left" Margin="5,5,5,0" Click="NewGameButton_Click" Template="{StaticResource TowerButton}" SnapsToDevicePixels="True" IsEnabled="{Binding ElementName=Levels, Path=SelectedItem, Converter={StaticResource SelectedItemToEnabledConverter}}" BorderBrush="#FF707070">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Image Source="/NRTowerDefense;component/images/newgame.png" Width="32" Height="32" />
+                                    <Label Content="Новая игра" Foreground="Black" VerticalContentAlignment="Center" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Border BorderBrush="#FF525252" Margin="20,0" BorderThickness="1" CornerRadius="0,0,5,5">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFC4C4C4" Offset="1" />
+                                    <GradientStop Color="White" Offset="0" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.OpacityMask>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#7F000000" Offset="0.129" />
+                                    <GradientStop Color="Black" Offset="1" />
+                                    <GradientStop Color="#00000000" Offset="0" />
+                                </LinearGradientBrush>
+                            </Border.OpacityMask>
+                            <ListView Name="Levels" SelectionMode="Single" BorderBrush="{x:Null}" Padding="0,5" Background="{x:Null}" HorizontalContentAlignment="Center"/>
+                        </Border>
+                        <Button HorizontalContentAlignment="Left" Margin="5" Click="RecordsButton_Click" Template="{StaticResource TowerButton}" SnapsToDevicePixels="True" BorderBrush="#FF707070" Name="RecordsButton">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Image Source="/NRTowerDefense;component/images/top.png" Width="32" Height="32" />
+                                    <Label Content="Таблица рекордов" Foreground="Black" VerticalContentAlignment="Center" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button HorizontalContentAlignment="Left" Margin="5" Click="CloseButton_Click" Template="{StaticResource TowerButton}" SnapsToDevicePixels="True" BorderBrush="#FF707070">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Image Source="/NRTowerDefense;component/images/exit.png" Width="32" Height="32" />
+                                    <Label Content="Выйти из игры" Foreground="Black" VerticalContentAlignment="Center" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
